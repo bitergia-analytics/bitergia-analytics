@@ -129,13 +129,14 @@ jobs:
   semverup:
     name: Choose highest version number
     runs-on: ubuntu-latest
+    environment: bap-release
     needs:
       - setup
     outputs:
       version: ${{ steps.version.outputs.new_version }}
     steps:
       - name: Choose version number
-        id: version
+        id: choose_version
         run: |
           versions=(
             ${{ needs.setup.outputs.bitergia_analytics_version }}
@@ -150,6 +151,44 @@ jobs:
           IFS=$'\n' new_version=($(sort -r -V <<<"${versions[*]}" | head -n1)); unset IFS
           echo "new_version=$new_version" >> $GITHUB_OUTPUT
           echo $new_version
+
+      - name: Checkout bitergia-analytics repository to force new version
+        if: steps.choose_version.outputs.new_version == ''
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          repository: bitergia-analytics/bitergia-analytics
+          token: '${{ secrets.BAP_BUILD_TOKEN }}'
+          fetch-depth: 0
+
+      - name: Install release-tools
+        if: steps.choose_version.outputs.new_version == ''
+        run: pip install git+https://github.com/Bitergia/release-tools.git#egg=release-tools
+
+      - name: Force new version from bitergia-analytics repository
+        if: steps.choose_version.outputs.new_version == ''
+        id: version_main
+        run: |
+          if [ ${{ inputs.release_candidate }} == 'true' ]
+          then
+            rcArg='--pre-release'
+          else
+            rcArg=''
+          fi
+          old_version=$(<version)
+          new_version=$(semverup --dry-run --current-version $old_version --bump-version=patch $rcArg)
+          echo "new_version=$new_version" >> $GITHUB_OUTPUT
+
+      - name: Set new version
+        id: version
+        run: |
+          if [ "${{ steps.choose_version.outputs.new_version }}" != '' ]
+          then
+            echo "new_version=${{ steps.choose_version.outputs.new_version }}" >> $GITHUB_OUTPUT
+            echo ${{ steps.choose_version.outputs.new_version }}
+          else
+            echo "new_version=${{ steps.version_main.outputs.new_version }}" >> $GITHUB_OUTPUT
+            echo ${{ steps.version_main.outputs.new_version }}
+          fi
 
   bitergia-analytics-plugin:
     name: Bitergia Analytics Plugin
