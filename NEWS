@@ -1,5 +1,82 @@
 # Releases
 
+## Bitergia Analytics 0.34.0 - (2025-10-13)
+
+**New features:**
+
+ * Upgrade to GrimoireLab 1.17.0\
+   GrimoireLab 1.17.0 includes a toolkit function to create identity
+   uuids, improved LinkedIn merging and UI, and several SortingHat fixes.
+   Git timezone handling and Git commit trailer support were added,
+   Kitsune retries implemented, and GitHub index performance improved.
+   Dependencies were updated across components.
+
+
+
+The following list describes the changes by component:
+
+### bitergia-analytics-opensearch
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### bitergia-analytics-opensearch-dashboards
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### bitergia-analytics-plugin
+
+**Bug fixes:**
+
+ * Menu navigation unpinned filters\
+   The menu links didn't keep the pinned filters when navigating from
+   some URLs.
+
+### dotplot-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### network-vis-plugin
+
+**Bug fixes:**
+
+ * Disabled visualization in dashboard (#15)\
+   The network visualization no longer appears disabled when it is
+   embedded in a dashboard.
+
+### polar-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### radar-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### perceval-public-inbox
+  
+  * Update Poetry's package dependencies
+
+### perceval-topicbox
+  
+  * Update Poetry's package dependencies
+
+### perceval-pontoon
+  
+  * Update Poetry's package dependencies
+
+### sortinghat-openinfra
+  
+  * Update Poetry's package dependencies
+
+### sortinghat-eclipse-foundation
+  
+  * Update Poetry's package dependencies
+
+
 ## Bitergia Analytics 0.33.0 - (2025-09-24)
 
 **New features:**
