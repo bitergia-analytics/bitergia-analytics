@@ -1,0 +1,11 @@
+---
+title: Upgrade to GrimoireLab 1.17.0
+category: added
+author: Jose Javier Merchante <jjmerchante@bitergia.com>
+issue: null
+notes: >
+  GrimoireLab 1.17.0 includes a toolkit function to create identity uuids,
+  improved LinkedIn merging and UI, and several SortingHat fixes.
+  Git timezone handling and Git commit trailer support were added,
+  Kitsune retries implemented, and GitHub index performance improved.
+  Dependencies were updated across components.
