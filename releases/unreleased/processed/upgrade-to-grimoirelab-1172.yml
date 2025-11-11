@@ -1,9 +1,0 @@
----
-title: Upgrade to GrimoireLab 1.17.2
-category: added
-author: Jose Javier Merchante <jjmerchante@bitergia.com>
-issue: null
-notes: >
-  GrimoireLab 1.17.2 fixes a bug with UTF-8 handling in OpenSearch
-  for Git Areas of code and updates package dependencies.
-  Full release notes: https://github.com/chaoss/grimoirelab/releases/tag/1.17.2

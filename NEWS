@@ -1,5 +1,85 @@
 # Releases
 
+## Bitergia Analytics 0.35.0 - (2025-11-11)
+
+**New features:**
+
+ * Upgrade to GrimoireLab 1.17.2\
+   GrimoireLab 1.17.2 fixes a bug with UTF-8 handling in OpenSearch for
+   Git Areas of code and updates package dependencies. Full release
+   notes: https://github.com/chaoss/grimoirelab/releases/tag/1.17.2
+
+
+
+The following list describes the changes by component:
+
+### bitergia-analytics-opensearch
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### bitergia-analytics-opensearch-dashboards
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### bitergia-analytics-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### dotplot-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### network-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### polar-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### radar-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### perceval-public-inbox
+  
+  * Update Poetry's package dependencies
+
+### perceval-topicbox
+  
+  * Update Poetry's package dependencies
+
+### perceval-pontoon
+  
+  * Update Poetry's package dependencies
+
+### sortinghat-openinfra
+  
+  * Update Poetry's package dependencies
+
+### sortinghat-eclipse-foundation
+
+**Bug fixes:**
+
+ * Account fetching ordered by UID\
+   Sort accounts by UID and adds support for resuming from a specific
+   page.
+
+**Performance improvements:**
+
+ * Parallel processing for importing accounts\
+   Implement parallel processing to improve the efficiency of account
+   imports. By processing multiple accounts simultaneously, we reduce the
+   overall time taken to fetch and process account data.
+
+
 ## Bitergia Analytics 0.34.1 - (2025-11-03)
 
 **Bug fixes:**
