@@ -1,0 +1,10 @@
+---
+title: Upgrade to GrimoireLab 1.17.3
+category: dependency
+author: Jose Javier Merchante <jjmerchante@bitergia.com>
+issue: null
+notes: >
+  GrimoireLab 1.17.3 improves incremental data collection
+  logic and updates package dependencies.
+  Full release notes: https://github.com/chaoss/grimoirelab/releases/tag/1.17.3
+
