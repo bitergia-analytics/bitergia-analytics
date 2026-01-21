@@ -1,5 +1,75 @@
 # Releases
 
+## Bitergia Analytics 0.37.0 - (2026-01-21)
+
+**New features:**
+
+ * Upgrade to GrimoireLab 1.19.0\
+   GrimoireLab 1.19.0 fixes several bugs in SortingHat and improve the
+   performance. It also fixes a bug in Bugzilla REST enriched index. Full
+   release notes:
+   https://github.com/chaoss/grimoirelab/releases/tag/1.19.0
+
+
+
+The following list describes the changes by component:
+
+### bitergia-analytics-opensearch
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### bitergia-analytics-opensearch-dashboards
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### bitergia-analytics-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### dotplot-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### network-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### polar-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### radar-vis-plugin
+  
+  * No changes on this component. The version is bumped to align it
+    with the rest of the components.
+
+### perceval-public-inbox
+  
+  * Update Poetry's package dependencies
+
+### perceval-topicbox
+  
+  * Update Poetry's package dependencies
+
+### perceval-pontoon
+  
+  * Update Poetry's package dependencies
+
+### sortinghat-openinfra
+  
+  * Update Poetry's package dependencies
+
+### sortinghat-eclipse-foundation
+  
+  * Update Poetry's package dependencies
+
+
 ## Bitergia Analytics 0.36.0 - (2025-12-12)
 
 **New features:**
