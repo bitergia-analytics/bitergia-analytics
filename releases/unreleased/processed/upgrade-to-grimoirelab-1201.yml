@@ -1,8 +1,0 @@
----
-title: Upgrade to GrimoireLab 1.20.1
-category: added
-author: Jose Javier Merchante <jjmerchante@bitergia.com>
-issue: null
-notes: >
-  GrimoireLab 1.20.1 fixes a bug with SortingHat static files in AWS S3.
-
