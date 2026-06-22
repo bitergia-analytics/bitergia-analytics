@@ -1,0 +1,10 @@
+---
+title: Upgrade to GrimoireLab 1.21.0
+category: added
+author: Jose Javier Merchante <jjmerchante@bitergia.com>
+issue: null
+notes: >
+  GrimoireLab 1.21.0 updates Vue plugin version of SortingHat's UI
+  with a higher Node.js requirement, support for pulling credentials
+  from external secrets managers, better Phabricator/Phorge support,
+  and updated dependencies accross all the packages.
